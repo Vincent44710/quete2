@@ -1,0 +1,11 @@
+<div class="form">
+  <h1>User Profil</h1>
+  <img [src]="user.photo" alt="photo de profil" />
+  <p>Citation: {{ user.quote }}</p>
+  <input title="citation" type="text" [(ngModel)]="user.quote" />
+  <h5>My name is {{ user.name }} {{ user.firstName }}</h5>
+  <h5 *ngIf="ageShowed">My age is {{ user.age }} years</h5>
+  <button (click)="ageShowed = !ageShowed">
+    {{ ageShowed ? "Hide" : "Show" }} age
+  </button>
+</div>
